@@ -11,7 +11,8 @@
     const contentImage = $(".content-image");
     const btnNhanGui = $(".btn-nhangui");
     const audioMm = $("#memory");
-    audioMm.play();
+    audioMm.src = "asset/audio/memory.mp3";
+    
     
     btnChuyenAnh.onclick = () => {
         // checkWrapper.style.display = 'none';
@@ -19,6 +20,14 @@
         contentImage.scrollIntoView();
 
         handleSwing(btnNhanGui);
+    }
+    
+    // setTimeout(function(){
+    //     audioMm.play();
+    // }, 2000);
+
+    inputDate.onclick = () => {
+        audioMm.play();
     }
     
     
