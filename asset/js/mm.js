@@ -2,7 +2,6 @@
     const $ = document.querySelector.bind(document);
     const $$ = document.querySelectorAll.bind(document);
 
-    console.log("heheeh")
     const inputDate = $(".input-date");
     const btnGoto = $(".btn-goto");
     const checkContent = $(".check-content");
@@ -20,8 +19,6 @@
         contentImage.scrollIntoView();
 
         handleSwing(btnNhanGui);
-
-        console.log("done");
     }
     
     
@@ -33,7 +30,6 @@
             checkContent.innerHTML = `Trí nhớ tốt, cho 10 đỉm`;
             btnChuyenAnh.style.display = 'block';
         }
-        console.log(inputValue);
     }
     
     btnGoto.onclick = () => {
@@ -43,7 +39,6 @@
     
 
     function handleSwing(btnNhanGui) {
-        console.log("run")
         const btnLetterAnimate = btnNhanGui.animate([
             {transform: "translateX(-300%)"}
         ], {
@@ -85,7 +80,6 @@
         function typewriter2() {
             sContents =  ' ';
             iRow = Math.max(0, iIndex-iScrollAt);
-            // console.log("contentCmsn", contentCmsn);
             
             while ( iRow < iIndex ) {
                 sContents += aText[iRow++] + '<br />';

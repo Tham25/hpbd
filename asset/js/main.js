@@ -29,7 +29,7 @@
     //btn-letter
     var btnLetter = $(".btn-letter");
     function handleRotate(btnLetter) {
-        console.log("run")
+
         const btnLetterAnimate = btnLetter.animate([
             {transform: 'rotate(360deg)'}
         ], {
@@ -70,7 +70,6 @@
         function typewriter() {
             sContents =  ' ';
             iRow = Math.max(0, iIndex-iScrollAt);
-            // console.log("contentHello", contentHello);
             
             while ( iRow < iIndex ) {
                 sContents += aText[iRow++] + '<br />';
@@ -90,7 +89,6 @@
                     iArrLength = aText[iIndex].length;
                     setTimeout(typewriter, 500);
                 } else {
-                    console.log("done")
                     btnLetter.style.display = "block";
                     tanghoaGif.style.display = 'flex';
 
@@ -130,7 +128,6 @@
         function typewriter2() {
             sContents =  ' ';
             iRow = Math.max(0, iIndex-iScrollAt);
-            // console.log("contentCmsn", contentCmsn);
             
             while ( iRow < iIndex ) {
                 sContents += aText[iRow++] + '<br />';
@@ -144,7 +141,7 @@
     
             
             if ( iTextPos++ == iArrLength ) {
-                iTextPos = 0;
+                iTextPos = 0; 
                 iIndex++;
                 if ( iIndex != aText.length ) {
                     iArrLength = aText[iIndex].length;
@@ -158,12 +155,12 @@
                     var num = 3;
                     var x = setInterval(function() {
                         contentCountDown.innerHTML = num;
-                        console.log("num", num)
+
                         if (num == 1) {
                             setTimeout(function() {
                                 contentCountDown.style.display = 'none';
                                 hpbdGif.style.display = 'none';
-                                showFace.style.display = 'block'
+                                showFace.style.display = 'block';
                                 clearInterval(x);
                             }, 1000);
                             
